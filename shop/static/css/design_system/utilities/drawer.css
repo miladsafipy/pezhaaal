@@ -1,0 +1,43 @@
+@import url('../base/variables.css');
+
+
+@media(max-width: 768px){
+     .drawer{
+        position: fixed;  
+        top: 0;
+        right: -100%;
+        width: 340px;
+        max-width: 90vw;
+        height: 100vh;
+        background: var(--surface);
+        transition: var(--transition-normal);
+        z-index: var(--z-drawer);
+        overflow-y: auto;
+        box-shadow: var(--shadow-lg);
+    }
+    
+    .drawer.active{
+        right: 0;
+    }
+    
+    .drawer-overlay{
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,.45);
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition-normal);
+        z-index: var(--z-overlay);
+        pointer-events:  none;
+    }
+    
+    .drawer-overlay.active{
+        opacity: 1;
+        visibility: visible;
+        pointer-events:  auto;
+    }
+    
+    body.no-scroll{
+        overflow: hidden;
+    }
+}

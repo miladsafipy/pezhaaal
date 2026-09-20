@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../../static/css/pages/details_page.css"> -->
+     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <title>جزئیات محصول</title>
+</head>
+<body>
+
+    <!-- NavBar -->
+    <header>
+        {% include '../components/navigationBar.html' %}
+    </header>
+    
+    <main class="detail-page">
+
+        <article class="product-details">
+
+            <!-- Product Image Carousel -->
+            <section class="product-detail-gallery" data-gallery>
+
+                <!-- Main Image -->
+                <div class="gallery-main">
+
+                    <img
+                        class="gallery-main-image"
+                        src="../../static/img/1.jpg"
+                        alt="نام محصول"
+                        data-gallery-main>
+                    
+                </div>
+
+
+                <!-- Thumbnails -->
+                <div class="gallery-thumbnails" data-gallery-thumbnails>
+
+                    <button
+                        class="gallery-thumbnail is-active"
+                        type="button"
+                        data-gallery-thumb
+                        data-index="0"
+                        aria-label="نمایش تصویر اول">
+
+                        <img
+                            src="../../static/img/1.jpg"
+                            alt=""
+                        >
+
+                    </button>
+
+
+                    <button
+                        class="gallery-thumbnail"
+                        type="button"
+                        data-gallery-thumb
+                        data-index="1"
+                        aria-label="نمایش تصویر دوم">
+
+                        <img
+                            src="../../static/img/2.jpg"
+                            alt=""
+                        >
+
+                    </button>
+
+
+                    <button
+                        class="gallery-thumbnail"
+                        type="button"
+                        data-gallery-thumb
+                        data-index="2"
+                        aria-label="نمایش تصویر سوم">
+
+                        <img
+                            src="../../static/img/3.jpg"
+                            alt=""
+                        >
+
+                    </button>
+
+
+                    <button
+                        class="gallery-thumbnail"
+                        type="button"
+                        data-gallery-thumb
+                        data-index="3"
+                        aria-label="نمایش تصویر چهارم">
+
+                        <img
+                            src="../../static/img/4.jpg"
+                            alt=""
+                        >
+
+                    </button>
+
+
+                    <button
+                        class="gallery-thumbnail"
+                        type="button"
+                        data-gallery-thumb
+                        data-index="4"
+                        aria-label="نمایش تصویر پنجم">
+
+                        <img
+                            src="../../static/img/5.jpg"
+                            alt=""
+                        >
+
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- Produt Description -->
+            <section class="product-detail-description">
+                <div class="detail-content">
+                    <h2>نام محصول</h2>
+                    <span>توضیحات لازم برای محصول</span>
+                </div>
+            </section>
+
+            <!-- Rate, Price, Comments -->
+            <section class="product-detail-info">
+
+                <div class="info-rate">
+                    <span>امتیاز</span>
+                    <span class="info-rate-stars">
+                        <img src="../../static/img/gold-star.svg" alt="">
+                        <img src="../../static/img/gold-star.svg" alt="">
+                        <img src="../../static/img/gold-star.svg" alt="">
+                        <img src="../../static/img/gold-star.svg" alt="">
+                        <img src="../../static/img/gold-star.svg" alt="">
+                    </span>
+                </div>
+
+                
+                <div class="info-price">
+                    <span>قیمت</span>
+                    <div class="info-price-details">
+                        <span class="info-current-price">250000 تومان</span>
+                        <span class="info-previous-price">300000 تومان</span>
+                    </div>
+                </div>
+
+
+                <div class="info-comments">
+                    <!-- Comments Header -->
+                    <div class="info-comments-header">
+
+                        <h4>نظرات کاربران</h4>
+
+                        <span class="comments-count">
+                            12 نظر
+                        </span>
+
+                    </div>
+
+
+                    <!-- Scrollable Comments -->
+                    <div class="comments-list">
+
+                        <article class="comment">
+
+                            <div class="comment-header">
+
+                                <strong>علی رضایی</strong>
+
+                                <span class="comment-rating">
+                                    ★★★★★
+                                </span>
+
+                            </div>
+
+                            <p class="comment-text">
+                                کیفیت محصول بسیار خوب بود و کاملاً مطابق توضیحات سایت
+                                به دستم رسید.
+                            </p>
+
+                            <time class="comment-date">
+                                25 مرداد 1405
+                            </time>
+
+                        </article>
+
+
+                        <article class="comment">
+
+                            <div class="comment-header">
+
+                                <strong>سارا محمدی</strong>
+
+                                <span class="comment-rating">
+                                    ★★★★☆
+                                </span>
+
+                            </div>
+
+                            <p class="comment-text">
+                                بسته‌بندی خوبی داشت و محصول هم کیفیت قابل قبولی داشت.
+                            </p>
+
+                            <time class="comment-date">
+                                22 مرداد 1405
+                            </time>
+
+                        </article>
+
+
+                        <article class="comment">
+
+                            <div class="comment-header">
+
+                                <strong>محمد احمدی</strong>
+
+                                <span class="comment-rating">
+                                    ★★★★★
+                                </span>
+
+                            </div>
+
+                            <p class="comment-text">
+                                نسبت به قیمت محصول، کیفیت خیلی خوبی دارد.
+                            </p>
+
+                            <time class="comment-date">
+                                18 مرداد 1405
+                            </time>
+
+                        </article>
+
+
+                        <article class="comment">
+
+                            <div class="comment-header">
+
+                                <strong>نگار کریمی</strong>
+
+                                <span class="comment-rating">
+                                    ★★★★☆
+                                </span>
+
+                            </div>
+
+                            <p class="comment-text">
+                                تجربه خوبی از خرید این محصول داشتم.
+                            </p>
+
+                            <time class="comment-date">
+                                15 مرداد 1405
+                            </time>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- Add Comment -->
+                    <form class="comment-form">
+
+                        <textarea
+                            class="comment-input"
+                            placeholder="نظر خود را درباره این محصول بنویسید..."
+                            rows="2">
+                        </textarea>
+
+                        <button
+                            type="submit"
+                            class="comment-submit">
+                            افزودن نظر
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+            <!-- Personalization -->
+            <section class="product-detail-personalization">
+                <span class="personal-explain">در این قسمت شما می توانید مواردی را به دلخواه اضافه کنید یا تغییر دهید:</span>
+
+                <form class="personalization-boxes">
+
+                    <div class="personal-box color-option">
+                        <label for="color">رنگ</label>
+                        <select name="color" id="color">
+                            <option value="yellow">انتخاب ...</option>
+                            <option value="yellow">زرد</option>
+                            <option value="blue">آبی</option>
+                            <option value="brown">قهوه ای</option>
+                        </select>
+                        
+                    </div>
+
+                    <div class="personal-box hair">
+                        <label for="hair">مدل مو</label>
+                        <select name="hair" id="hair">
+                            <option value="yellow">انتخاب ...</option>
+                            <option value="yellow">فرفری</option>
+                            <option value="blue">صاف</option>
+                        </select>
+                    </div>
+
+                    <div class="personal-box accessory">
+                        <label>اکسسوری</label>
+                        <div class="accessory-options">
+                            <input type="checkbox" name="accessory" id="accessory">پاپیون
+                            <input type="checkbox" name="accessory" id="accessory">چاقو
+                            <input type="checkbox" name="accessory" id="accessory">گل سر
+                        </div>
+                    </div>
+
+                    <div class="personal-box selective-text">
+                        <label for="selective-text">متن دلخواه</label>
+                        <input type="text" name="selective-text" id="selective-text"
+                                placeholder="متن دلخواه خود را وارد نمایید">
+                    </div>
+
+                    <div class="personal-btn">
+                        <button>اعمال شخصی سازی</button>
+                    </div>
+
+                </form>
+            </section>
+
+            <!-- Buttons -->
+            <section class="product-detail-buttons">
+                <button class="add-to-cart general-btn">افزودن به سبد خرید</button>
+            </section>
+
+            <section class="product-detail-buttons">
+                <a href="#" class="back general-btn">بازگشت</a>
+            </section>
+
+        </article>
+
+    </main>
+
+
+    <script src="{% static 'js/control_system/components/carousel_manager.js' %}"></script>
+
+</body>
+</html>

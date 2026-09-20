@@ -1,0 +1,49 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <title>Home Page</title>
+</head>
+<body>
+    <!-- ====================================
+                    NAVIGATION BAR
+        ===================================== -->
+    <header>
+        {% include '../components/navigationBar.html' %}
+    </header>
+    
+    
+
+    <!-- ====================================
+                        HERO
+        ===================================== -->
+    
+    {% include '../components/hero.html' %}
+    
+
+    
+    {% include '../components/category_card.html' %}
+
+
+    
+    {% include '../components/special_cards.html' %}
+    
+
+
+    {% include '../components/new_arrivals.html' %}
+        
+    
+
+    <!-- ====================================
+                        FOOTER
+        ===================================== -->
+    
+    {% include '../components/footer.html' %}
+    
+</body>
+</html>

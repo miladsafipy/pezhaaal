@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Soraya;
+    src: url('../../fonts/Soraya.ttf');
+}
+
+body{
+    font-family: Soraya;
+    direction: rtl;
+    text-align: right;
+    background: white;
+}
+
+.carousel{
+    width: 100%;
+    padding: 70px 0;
+}
+
+.container{
+    width: 70%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.slider{
+    display: flex;
+    gap: 40px;
+    transition: opacity .35s ease;
+    position: relative;
+}
+
+/* این کلاس را در جاوااسکریپت برای تغییر تصویر استفاده می کنیم */
+.fade{
+    opacity: 0;
+}
+
+.slider-image{
+    flex: 2;
+}
+
+.slider-content{
+    flex: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-image{
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+
+.main-image, .slider-content{
+    transition: all .35s ease;
+}
+
+.product-title{
+    font-size: 26px;
+    font-weight: bold;
+    color: #222;
+}
+
+.product-description{
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.product-price{
+    font-size: 20px;
+    font-weight: bold;
+    color: #d62828;
+}
+
+.product-btn{
+    display: inline-block;
+    padding: 15px 30px;
+    background: #1f8a70;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.product-btn:hover{
+    background: #166d59;
+    transform:scale(1.05);
+}
+
+.thumbnails{
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.thumbnail{
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.thumbnail img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbnail:hover{
+    transform: scale(1.05);
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+    border-color: #034736;
+}
+
+.active{
+    border: 3px solid #043d2f;
+    box-shadow:0 0 15px rgba(31,138,112,.4);
+}
+
+.prev-btn, .next-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    transition: .3s;
+}
+
+.prev-btn{
+    right: 20px;
+}
+
+.next-btn{
+    left: 20px;
+}
+
+.prev-btn:hover,
+.next-btn:hover{
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* تنظیم نمایش در صفحه نمایش کوچک */
+/* Tablet */
+@media(max-width: 992px){
+    .slider{
+        flex-direction: column;
+    }
+
+    .slider-image{
+        width: 100%;
+    }
+
+    .slider-content{
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .main-image{
+        width: 100%;
+        height: auto;
+    }
+
+    .thumbnails{
+        overflow-x:auto;
+        display:flex;
+        gap:10px;
+        scrollbar-width:none;
+    }
+
+    .thumbnails::-webkit-scrollbar{
+        display: none;
+    }
+
+    .thumbnail{
+        flex: 0 0 90px;
+    }
+
+    .prev-btn, .next-btn{
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .product-title{
+        font-size: 18px;
+    }
+    .product-description{
+        font-size: 14px;
+    }
+
+    .product-btn{
+        width: 100%;
+    }
+}
+
+/* mobile */
+@media(max-width: 768px){
+
+}
+
+/* small mobile */
+@media(max-width: 480px){
+
+}

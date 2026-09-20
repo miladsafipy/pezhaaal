@@ -1,0 +1,44 @@
+
+
+/* ========================================
+   Shine Effect
+   ======================================== */
+
+.ds-shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.ds-shine::after {
+    content: "";
+
+    position: absolute;
+    inset: -60% auto -60% -100%;
+
+    width: 35%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.45),
+        transparent
+    );
+
+    transform: rotate(18deg);
+
+    pointer-events: none;
+}
+
+.ds-shine:hover::after {
+    animation: ds-shine-sweep 0.8s ease-in-out;
+}
+
+@keyframes ds-shine-sweep {
+    from {
+        left: -100%;
+    }
+
+    to {
+        left: 150%;
+    }
+}

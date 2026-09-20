@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/carousel.css">
+    <title>Carousel Gallery</title>
+</head>
+
+
+<body>
+    <section class="carousel">
+
+        <div class="container">
+            <!-- برای تصویر بزرگ و متن مربوط به آن -->
+            <div class="slider">
+                <!-- فلش قبل -->
+                <button class="prev-btn">
+                    ❮
+                </button>
+
+                <!-- عکس بزرگ -->
+                <div class="slider-image">
+                    <img class="main-image" src="img/1.jpg" alt="">
+                </div>
+
+                <!-- متن مربوط به هر عکس -->
+                <div class="slider-content">
+                    <h2 class="product-title">نام محصول</h2><hr>
+                    <p class="product-description">جزئیات محصول</p>
+                    <span class="product-price">قیمت</span>
+                    <a href="#" class="product-btn">مشاهده ی محصول</a>
+                </div>
+
+                <!-- فلش بعد -->
+                <button class="next-btn">
+                    ❯
+                </button>
+
+            </div>
+
+            <!-- برای تصاویر کوچک -->
+            <div class="thumbnails">
+                <div class="thumbnail active" 
+                    data-id="1"
+                    data-title="آویز جوجه"
+                    data-description="پلیمر نشکن"
+                    data-price="250000 تومان"
+                    data-link="#"
+                    data-image="img/1.jpg">
+                    <img src="img/1.jpg" alt="">
+                </div>
+                <div class="thumbnail active" 
+                    data-id="2"
+                    data-title="روداشبوردی"
+                    data-description="چسب قوی"
+                    data-price="150000 تومان"
+                    data-link="#"
+                    data-image="img/2.jpg">
+                    <img src="img/2.jpg" alt="">
+                </div>
+                <div class="thumbnail active" 
+                    data-id="3"
+                    data-title="سرکلیدی مهربان"
+                    data-description="پلیمر نشکن"
+                    data-price="200000 تومان"
+                    data-link="#"
+                    data-image="img/3.jpg">
+                    <img src="img/3.jpg" alt="">
+                </div>
+                <div class="thumbnail active" 
+                    data-id="4"
+                    data-title=""
+                    data-description=""
+                    data-price=""
+                    data-link="#"
+                    data-image="img/4.jpg">
+                    <img src="img/4.jpg" alt="">
+                </div>
+                <div class="thumbnail active" 
+                    data-id="5"
+                    data-title=""
+                    data-description=""
+                    data-price=""
+                    data-link="#"
+                    data-image="img/5.jpg">
+                    <img src="img/5.jpg" alt="">
+                </div>
+                <div class="thumbnail active" 
+                    data-id="6"
+                    data-title=""
+                    data-description=""
+                    data-price=""
+                    data-link="#"
+                    data-image="img/6.jpg">
+                    <img src="img/6.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+
+</html>

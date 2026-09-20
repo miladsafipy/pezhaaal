@@ -1,0 +1,31 @@
+@import url('../base/variables.css');
+@import url('../base/typography.css');
+
+
+/*   ==========================
+        LABLE FLOATING
+    ========================== */
+.label-floating{
+    position: relative;
+}
+
+.label-floating label{
+    position: absolute;
+    background: white;
+    color: var(--text);
+    padding: 0;
+    transition: all var(--transition-normal);
+    pointer-events: none;
+}
+
+/* وقتی فوکوس شد */
+/* .label-floating input:focus + label{
+    top: 15px;
+    right: 20px;
+} */
+
+/* وقتی متن داخل input وجود دارد */
+/* .label-floating input:not(:placeholder-shown) + label{
+    top: 15px;
+    right: 20px;
+} */

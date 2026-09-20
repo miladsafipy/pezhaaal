@@ -1,0 +1,363 @@
+
+
+<!-- <!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/components/navbar.css">
+    <title>Navigation Bar</title>
+</head>
+
+
+<body>
+    <header> -->
+        <div class="container">
+            
+            <!-- Nav Bar -->
+            <nav class="navbar">
+                <div class="nav-container">
+
+                    <!-- لوگو و نام -->
+                    <a class="logo" href="#">
+                        <img class="logo-image" src="../../static/img/leaves.svg" alt="logo">
+                        <h2 class="brand-name">پژال</h2>
+                    </a>
+    
+    
+                    <!-- آیتم ها -->
+                    <div class="nav-menu-wrapper">
+                        <ul class="nav-menu">
+                            <li><a class="nav-link active" href="#">خانه</a></li>
+                            <li><a class="nav-link" href="#">فروشگاه</a></li>
+                            <li><a class="nav-link" href="#">درباره ی ما</a></li>
+                            <li><a class="nav-link" href="#">تماس با ما</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- آیکون ها -->
+                    <div class="nav-icons">
+                        <button type="button" class="icon-btn search-btn panel-toggle"
+                                data-target=".search-bar">
+                            <img src="../../static/img/search.svg">
+                        </button>
+
+                        <button type="button" class="icon-btn cart-btn panel-toggle"
+                                data-target=".cart-drawer">
+                            <img src="../../static/img/shopping-cart.svg">
+                        </button>
+
+                        <!-- دیتاتارگت برای این است که به پنجره ی مدال با آی دی همین نام وصل شود -->
+                        <button type="button" class="icon-btn login-btn panel-toggle"
+                                data-target=".auth">
+                            <img src="../../static/img/user-login.svg">
+                        </button>
+
+                    </div>
+                    
+                    <!-- کلید همبرگری منو برای گوشی -->
+                    <button type="button" class="icon-btn menu-btn panel-toggle"
+                                data-target=".mobile-menu">
+                        <img class="hamburger-menu" src="../../static/img/accordeon-menu.svg" alt="">
+                    </button>
+
+                </div>
+
+            </nav>
+
+
+
+            <!-- ساختار منوی همبرگری -->
+            <div class="mobile-menu">
+
+                <div class="mobile-header">
+
+                    <button type="button" class="close-mobile">
+                        <img src="../../static/img/x.svg">
+                    </button>
+
+                    <h2>پژال</h2>
+                </div>
+                <hr class="end-divider">
+
+                <div class="mobile-body">
+                    <ul class="mobile-links">
+                        <li><a href="#">
+                                <img src="../../static/img/home.svg" alt="home">
+                                خانه
+                            </a>
+                        </li>
+    
+                        <li><a href="#">
+                                <img src="../../static/img/store.svg" alt="store">
+                                فروشگاه
+                            </a>
+                        </li>
+    
+    
+                        <li><a href="#">
+                                <img src="../../static/img/information.svg" alt="about us">
+                                درباره ی ما</a>
+                        </li>
+
+                        <li><a href="#">
+                                <img src="../../static/img/contact.svg" alt="teacher">
+                                تماس با ما
+                            </a>
+                        </li>
+    
+                    </ul>
+                </div>
+
+
+                <div class="mobile-footer">
+                    <p>ورژن 1.0</p>
+                </div>
+            </div>
+
+
+
+            <!-- غیرفعال شدن صفحه در جاوااسکریپت -->
+            <div class="overlay"></div>
+
+
+            <!-- سکشن برای فیلد سرچ -->
+            <div class="search-bar">
+                <div class="search-container">
+                    <input type="text" 
+                        class="search-input"
+                        placeholder="جستجو ...">
+
+                    <button class="search-submit" type="button">
+                        <img src="../../static/img/search.svg" alt="search">
+                    </button>
+                </div>
+            </div>
+
+            <!-- فرم ورود و عضویت -->
+            <div class="auth">
+
+                <div class="auth-container">
+
+                    <div class="auth-header">
+                        
+                        <div class="auth-close-btn">
+                            <button class="close-btn">
+                                <img src="../../static/img/x.svg">
+                            </button>
+                        </div>
+                
+                        <div class="auth-tabs tab-design">
+                            <button class="login-choice tab active">ورود</button>
+                            <button class="signup-choice tab">عضویت</button>
+                        </div>
+                    </div>
+            
+            
+                    
+                    <div class="auth-viewport">
+                        <div class="auth-slider">
+            
+                            <section class="auth-slide" data-slide="login">
+                                <div class="auth-image">
+                                    <img src="../../static/img/login.svg" alt="Log in">
+                                </div>
+                    
+                                
+                                <form class="auth-form">
+                                    <div class="auth-inputs">
+                                            
+                                        <div class="label-floating general-input">
+                                            <input type="text" class="" name="" id="" placeholder="">
+                                            <label for="">نام کاربری</label>
+                                        </div>
+                        
+                                            
+                                        <div class="label-floating general-input">
+                                            <input type="password" class="" name="" id="" placeholder="">
+                                            <label for="">رمز عبور</label>
+                                        </div>
+                        
+                                            
+                                        <div class="captcha-field label-floating general-input">
+                                            <input type="text" class="" name="captcha" id="captcha" placeholder="">
+                                            <label for="captcha">کد کپچا</label>
+                                            <div class="captcha"></div>
+                                        </div>
+                
+                                        <div class="forgot-password">
+                                            <a href="#">نام کاربری یا رمز عبور را فراموش کرده اید؟</a>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="auth-actions">
+                                        <button type="submit" class="general-btn"> ورود </button>
+                                    </div>
+                    
+                                </form>
+                            </section>
+                
+                            
+                            <section class="auth-slide" data-slide="signup">
+                                <div class="auth-image">
+                                    <img src="../../static/img/signup.svg" alt="Sign Up">
+                                </div>
+                    
+                                
+                                <form class="auth-form">
+                                    <div class="auth-inputs">
+                                            
+                                        <div class="label-floating general-input">
+                                            <input type="text" class="" name="" id="" placeholder="">
+                                            <label for="">نام</label>
+                                        </div>
+                
+                                        <div class="label-floating general-input">
+                                            <input type="text" class="" name="" id="" placeholder="">
+                                            <label for="">نام خانوادگی</label>
+                                        </div>
+                
+                                        <div class="label-floating general-input">
+                                            <input type="text" class="" name="" id="" placeholder="">
+                                            <label for="">نام کاربری</label>
+                                        </div>
+                
+                                        <div class="label-floating general-input">
+                                            <input type="tel" class="" name="" id="" placeholder="">
+                                            <label for="">شماره تماس</label>
+                                        </div>
+                        
+                                            
+                                        <div class="label-floating general-input">
+                                            <input type="password" class="" name="" id="" placeholder="">
+                                            <label for="">رمز عبور</label>
+                                        </div>
+                
+                                        <div class="label-floating general-input">
+                                            <input type="password" class="" name="" id="" placeholder="">
+                                            <label for="">تکرار رمز عبور</label>
+                                        </div>
+                                            
+                                    </div>
+                    
+                                    <div class="auth-actions">
+                                        <button type="submit" class="general-btn"> ثبت نام </button>
+                                    </div>
+                    
+                                </form>
+                                
+                            </section>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            
+            <!-- سکشن فیلد سبد خرید -->
+            <div class="cart-drawer drawer">
+                <div class="cart-drawer-box">
+
+                    <!-- موضوع کارت -->
+                    <div class="cart-header">
+                        <button type="button" class="close-cart">
+                            <img src="../../static/img/x.svg" alt="">
+                        </button>
+                        <h2>سبد خرید</h2>
+                    </div>
+                    <hr class="end-divider">
+
+                    <!-- محصولات سفارش داده شده -->
+                    <div class="cart-body">
+                        <div class="cart-items">
+                            <div class="cart-item"
+                                data-id = "15">
+ 
+                                <!-- عکس محصول -->
+                                <div class="cart-image">
+                                     <img 
+                                         class="cart-product-image" 
+                                         src="../../static/img/1.jpg" 
+                                         alt="عکس سفارش">
+                                </div>
+ 
+                                <!-- نام، تعداد و قیمت هرواحد -->
+                                <div class="cart-content">
+                                    <h3>نام محصول</h3>
+                                    <div class="price">
+                                         <span class="item-number">تعداد</span>
+                                         <span class="multiply-sign"> x </span>
+                                         <span class="item-price">قیمت هر واحد</span>
+                                    </div>
+
+                                    <a href="#" class="edit-item">ویرایش سفارش</a>                                   
+                                </div>
+                                
+                            </div>
+
+                            <div class="cart-item"
+                                data-id = "15">
+ 
+                                <!-- عکس محصول -->
+                                <div class="cart-image">
+                                     <img 
+                                         class="cart-product-image" 
+                                         src="../../static/img/1.jpg" 
+                                         alt="عکس سفارش">
+                                </div>
+ 
+                                <!-- نام، تعداد و قیمت هرواحد -->
+                                <div class="cart-content">
+                                    <h3>نام محصول</h3>
+                                    <div class="price">
+                                         <span class="item-number">تعداد</span>
+                                         <span class="multiply-sign"> x </span>
+                                         <span class="item-price">قیمت هر واحد</span>
+                                    </div>
+
+                                    <a href="#" class="edit-item">ویرایش سفارش</a>                                   
+                                </div>
+                                
+                            </div>
+
+                        </div>
+
+                        <!-- سبد خرید خالی -->
+                        <div class="cart-empty">
+                            <img src="../../static/img/empty-cart.png" alt="سبد خرید خالی">
+                            <p>سبد خرید شما خالی می باشد</p>
+                            <a href="#">رفتن به فروشگاه</a>
+                        </div>
+
+                    </div>
+
+                    <!-- جمع قیمت سفارشات و دکمه ها -->
+                    <div class="cart-footer">
+                        <div class="total-price">
+                            <p>جمع کل سفارشات</p>
+                            <span>1800000 تومان</span>
+                        </div>
+                        <a class="view-cart" href="#">مشاهده سبد خرید</a>
+                        <a class="checkout-btn" href="#">تسویه حساب</a>
+                        
+                    </div>
+                </div>
+                    
+            </div>
+
+            
+        </div>
+
+
+        <!-- <script src="js/navBarScripts.js"></script> -->
+        <script src="../../static/js/control_system/components/panel_manager.js"></script>
+        <script src="../../static/js/components/login_signUp.js"></script>
+    <!-- </header>
+
+
+</body>
+
+
+</html> -->

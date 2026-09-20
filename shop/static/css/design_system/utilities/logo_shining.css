@@ -1,0 +1,44 @@
+/* درخشش نام پژال */
+
+
+.shining {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.shining::after {
+    content: "";
+    position: absolute;
+    inset: -50%;
+
+    background: linear-gradient(
+        115deg,
+        transparent 42%,
+        rgba(255,255,255,.15) 47%,
+        rgba(255,255,255,.95) 50%,
+        rgba(255,255,255,.15) 53%,
+        transparent 58%
+    );
+
+    transform: translateX(-180%) rotate(18deg);
+
+    animation: logoShine 4s cubic-bezier(.4,0,.2,1) infinite;
+}
+
+
+@keyframes logoShine {
+
+    0% {
+        transform: translateX(-180%) rotate(18deg);
+    }
+
+    70% {
+        transform: translateX(180%) rotate(18deg);
+    }
+
+    100% {
+        transform: translateX(180%) rotate(18deg);
+    }
+
+}

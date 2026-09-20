@@ -1,0 +1,64 @@
+@import url('variables.css');
+
+body{
+    font-family: var(--paeez-font);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-relaxed);
+    color: var(--primary);
+    background: var(--surface);
+}
+
+/* عنوان ها */
+h1{
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-extra-bold);
+    line-height: var(--lh-tight);
+}
+
+h2{
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-tight);
+}
+
+h3{
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+}
+
+h4{
+    font-size: var(--fs-h4);
+    font-weight: var(--fw-semibold);
+}
+
+/* متن ها */
+p{
+    font-size: var(--fs-body);
+    line-height: var(--lh-relaxed);
+}
+
+small{
+    font-size: var(--fs-small);
+}
+
+button,
+input,
+textarea,
+select{
+    font: inherit;
+}
+
+span{
+    font: inherit;
+}
+
+a{
+    font: inherit;
+    text-decoration: none;
+}
+
+li{
+    font: inherit;
+    list-style: none;
+}

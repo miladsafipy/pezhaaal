@@ -1,0 +1,38 @@
+@import url('../base/variables.css');
+
+.pagination{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:var(--space-sm);
+    margin-top:var(--space-3xl);
+    margin-bottom: var(--space-xl);
+}
+
+.page-number{
+    width:46px;
+    height:46px;
+    border:none;
+    border-radius:var(--radius-circle);
+    background:var(--surface);
+    cursor:pointer;
+    transition:var(--transition-normal);
+}
+
+.page-number:hover{
+    transform:translateY(-2px);
+    box-shadow:var(--shadow-md);
+}
+
+.page-number.active{
+    background:var(--primary);
+    color:white;
+}
+
+.page-btn{
+    width:46px;
+    height:46px;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+}

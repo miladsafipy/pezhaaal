@@ -1,0 +1,16 @@
+/* @import url('../design_system/base/reset.css');
+@import url('../design_system/base/variables.css');
+@import url('../design_system/base/typography.css'); */
+@import url('../design_system/utilities/title_divider.css');
+@import url('../components/product_card.css');
+
+
+.new-arrivals{
+    margin-bottom: var(--space-3xl);
+}
+
+.new-arrivals-grid{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}

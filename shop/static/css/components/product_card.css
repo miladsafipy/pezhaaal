@@ -1,0 +1,184 @@
+@import url('../design_system/base/variables.css');
+@import url('../design_system/base/typography.css');
+@import url('../design_system/base/reset.css');
+@import url('../design_system/components/buttons.css');
+@import url('../design_system/utilities/hover_shining.css');
+@import url('../design_system/utilities/glass_morphism.css');
+
+
+/* =========================================
+                     CARD BODY
+============================================ */
+.product-card{
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--radius-lg);
+    width: 300px;
+    max-width: 300px;
+    height: 480px;
+    margin-top: var(--space-md);
+    margin-right: var(--space-sm);
+    padding: var(--space-sm);
+    overflow: hidden;
+    transition: var(--transition-normal);
+}
+
+.product-card:hover{
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.product-card-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    border-radius: inherit;
+}
+
+
+
+/* =========================================
+                CARD IMAGE 
+============================================ */
+.product-card-image{
+    position: relative;
+}
+
+.product-card-image img{
+    width: 100%;
+    height: 180px;
+    border-radius: var(--radius-lg);
+    object-fit: cover;
+}
+
+.like-heart{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.like-heart img{
+    width: 25px;
+    height: 25px;
+    transition: var(--transition-normal);
+}
+
+.like-heart:hover img{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.category-label{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0 var(--space-sm);
+    border-radius: var(--radius-2xl);
+    cursor: context-menu;
+}
+
+.category-label span{
+    color: var(--white);
+}
+
+.discount-label{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 0 var(--space-sm);
+    border-radius: var(--radius-circle);
+    cursor: context-menu;
+}
+
+.discount-label span{
+    color: var(--red);
+    font-size: var(--fs-small);
+}
+
+
+
+/* =========================================
+                CARD CONTENT
+============================================ */
+.product-card-content{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: var(--lh-normal);
+    padding: 0 var(--space-sm);
+    cursor: context-menu;
+    /* border: 1px solid black; */
+}
+
+.product-card-name{
+    margin-right: var(--space-md);
+}
+
+.product-card-price{
+    display: flex;
+    flex-direction: column;
+}
+
+.current-price{
+    display: flex;
+    justify-content: space-between;
+}
+
+.current-price span{
+    font-weight: var(--fw-extra-bold);
+}
+
+.previous-price{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.previous-price span{
+    font-size: var(--fs-small);
+    text-decoration: line-through;
+    color: var(--secondary);
+}
+
+
+.product-card-grade{
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-card-grade span{
+    display: flex;
+    gap: 4px;
+}
+
+.stars img{
+    width: 25px;
+    height: 25px;
+}
+
+.product-card-grade p{
+    font-size: var(--fs-caption);
+}
+
+/* =========================================
+                CARD BUTTON
+============================================ */
+.product-card-buttons{
+    display: flex;
+    gap: var(--space-sm);
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+/* =========================================
+
+============================================ */

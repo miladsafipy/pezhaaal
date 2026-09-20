@@ -1,0 +1,217 @@
+/* @import url('../design_system/base/variables.css');
+@import url('../design_system/base/reset.css');
+@import url('../design_system/base/typography.css'); */
+
+/* ===========================
+   1. Footer Layout
+=========================== */
+.footer{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: var(--footer-bg);
+    color: var(--white);
+    padding-inline: var(--footer-padding-inline);
+    padding-block: var(--footer-padding-block);
+    isolation: isolate;
+    gap:clamp(48px,6vw,80px);
+}
+
+.footer section{
+   width: 100%;
+}
+
+.footer-container{
+   width: min(var(--footer-container-width),100%);
+   margin-inline: auto;
+}
+
+
+/* ===========================
+   5. Glass Cards
+=========================== */
+.glass-cards{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   align-items: center;
+   gap: var(--space-lg);
+}
+
+.glass-card{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   color: var(--footer-bg);
+   padding: var(--space-lg);
+   width: 14rem;
+   height: 12rem;
+   gap: var(--space-lg);
+   border-radius: var(--radius-lg);
+   overflow: hidden;
+   backdrop-filter: blur(var(--space-md));
+   -webkit-backdrop-filter: blur(var(--space-md));
+   background: var(--footer-200);
+   border:1px solid rgba(255,255,255,.25);
+   box-shadow: var(--footer-shadow-md);
+}
+
+.glass-card img{
+   width: 4rem;
+}
+
+.glass-card p{
+   font-weight: var(--fw-bold);
+}
+/* ===========================
+   6. Footer Grid
+=========================== */
+.footer-grid{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   align-items: flex-start;
+   gap: var(--space-xl);
+}
+/* ===========================
+   7. Brand
+=========================== */
+.footer-brand{
+   gap: var(--space-md);
+}
+
+
+.footer-brand img{
+   width: 4rem;
+   height: 4rem;
+   transition: var(--transition-very-slow);
+   filter: brightness(0) invert(1);
+}
+
+.footer-brand:hover img{
+   transform: rotate(20deg);
+}
+
+/* ===========================
+   8. Navigation
+=========================== */
+.footer-categories, .footer-links{
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-md);
+}
+
+.footer-categories a,
+.footer-links a{
+   text-decoration: none;
+   color: var(--white);
+   transition: var(--transition-slow);
+}
+
+.footer-categories a:hover,
+.footer-links a:hover{
+   color: var(--footer-200);
+   transform: scale(1.05);
+}
+/* ===========================
+   9. Contact
+=========================== */
+.contact{
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-md);
+}
+.contact img{
+   width: 2.5rem;
+   height: 2.5rem;
+}
+
+.contact-item{
+   display: flex;
+   flex-direction: row;
+   gap: var(--space-md);
+}
+
+.contact-item img{
+   transition: var(--transition-normal);
+   filter: brightness(0) invert(1);
+}
+
+.contact-item:hover img{
+   transform: rotate(12deg);
+}
+
+
+/* ===========================
+            DIVIDER
+=========================== */
+.end-divider{
+   border:none;
+   height:1px;
+   background:
+    linear-gradient(
+        to left,
+        transparent,
+        rgba(255,255,255,.18),
+        transparent);
+}
+
+/* ===========================
+   10. Footer Bottom
+=========================== */
+.footer-bottom{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.footer-bottom img{
+   width: 6rem;
+   height: 6rem;
+}
+/* ===========================
+   11. Back To Top
+=========================== */
+
+.back-to-top{
+   position: absolute;
+   left: 50%;
+   bottom: var(--space-md);
+   transform: translateX(-50%);
+   width: var(--space-3xl);
+   height: var(--space-3xl);
+   border: none;
+   border-radius: var(--radius-circle);
+   background: var(--footer-500);
+   color: var(--white);
+   cursor: pointer;
+   box-shadow: var(--footer-shadow);
+   transition: var(--transition-normal);
+   z-index: 5;
+
+      /* برای جاوااسکریپت برگشت به ایتدای صفحه */
+   opacity:0;
+   visibility:hidden;
+   transition:
+      opacity var(--transition-normal),
+      transform var(--transition-normal);
+}
+
+.back-to-top:hover{
+    background: var(--footer-400);
+    transform:
+        translateX(-50%)
+        translateY(-4px);
+
+}
+
+/* جاوااسکریپت برگشت به بالای صفحه */
+.back-to-top.show{
+   opacity: 1;
+   visibility: visible;
+}

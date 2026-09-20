@@ -1,0 +1,578 @@
+/* @import url('../design_system/base/reset.css'); */
+@import url('../design_system/base/variables/navbar_var.css');
+/* @import url('../design_system/base/typography.css'); */
+@import url('../design_system/components/inputs.css');
+@import url('../design_system/components/buttons.css');
+@import url('../components/login_signUp.css');
+@import url('../design_system/utilities/divider.css');
+
+
+
+/* ==========================
+        CONTAINER
+========================== */
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 ;
+}
+
+/* ==========================
+        NAVBAR
+========================== */
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: var(--z-navbar);
+    width: 100%;
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--radius-md);
+}
+
+.nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: var(--space-4xl);
+    padding-left: var(--space-2xl);
+    padding-right: var(--space-2xl);
+}
+
+/* ==========================
+        LOGO
+========================== */
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);  
+    transition: var(--transition-normal);
+}
+
+.logo:hover{
+    transform: scale(1.05);
+}
+
+.logo-image{
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    transition: var(--transition-slow);
+}
+
+.logo:hover .logo-image{
+    transform: rotateY(180deg);
+}
+
+.brand-name{
+    color: var(--primary);
+    font-weight: var(--fw-extra-bold);
+}
+
+/* ==========================
+        MENU
+========================== */
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    gap: var(--space-2xl);
+}
+
+.nav-link{
+    position: relative;
+    color: var(--primary);
+    padding: var(--space-sm) 0;
+    transition: color var(--transition-normal);
+}
+
+.nav-link::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: var(--space-xs);
+    width: 0;
+    height: var(--space-xs);
+    background: var(--primary-light);
+    border-radius: var(--radius-lg);
+    transition: width var(--transition-normal);
+}
+
+.nav-link:hover{
+    color: var(--primary-light);
+    font-weight: var(--fw-bold);
+}
+
+.nav-link:hover::after{
+    width:100%;
+}
+
+/* وقتی کاربر در یک صفحه باشد، خط زیر آن صفحه فعال بماند */
+.nav-link.active{
+    color: var(--primary-light);
+    font-weight: var(--fw-bold);
+}
+
+.nav-link.active::after{
+    width: 100%;
+    font-weight: var(--fw-bold);
+}
+
+/* ==========================
+        ICONS
+========================== */
+
+.nav-icons{
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.icon-btn{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-normal);
+    cursor: pointer;
+}
+
+.icon-btn img{
+    width: 35px;
+    height: 35px;
+}
+
+.icon-btn:hover{
+    transform: translateY(-3px) rotateY(180deg);
+    box-shadow: var(--shadow-md);
+    
+}
+
+
+/* ==========================
+        SEARCH BAR
+========================== */
+
+.search-bar{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    width: 60%;
+    max-height: 0;
+    transition: max-height var(--transition-normal);
+    z-index: var(--z-search-bar);
+}
+
+.search-bar.active{
+    max-height: 120px;
+}
+
+.search-container{
+    max-width: 700px;
+    margin: var(--space-lg) auto;
+    display: flex;
+    align-items: center;
+}
+
+.search-input{
+    flex: 1;
+    height: 52px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 0 var(--space-md);
+    outline: none;
+    transition: var(--transition-normal);
+}
+
+.search-input:focus{
+    border-color: var(--primary-light);
+}
+
+.search-submit{
+    width: 58px;
+    height: 52px;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    transition: var(--transition-normal);
+}
+
+.search-submit img{
+    width: 35px;
+}
+
+.search-submit:hover{
+    transform: scale(1.2);
+}
+
+/* ==========================
+        OVERLAY
+========================== */
+
+.overlay{
+    position: fixed;
+    inset: 0;
+    background: var(--overlay-bg);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-normal);
+    
+}
+
+.overlay.active{
+    opacity: 1;
+    visibility: visible;
+    z-index: var(--z-overlay);
+}
+
+
+
+/* ==========================
+        CART DRAWER
+========================== */
+
+.cart-drawer{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -420px;
+    width: 420px;
+    max-width: 90%;
+    height: 100vh;
+    background: var(--white);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-normal);
+    z-index: var(--z-cart-drawer);
+}
+
+.cart-drawer.active{
+    right: 0;
+}
+
+.cart-drawer-box{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.cart-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-lg);
+}
+
+.cart-header h2{
+    color: var(--primary);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.close-cart{
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.close-cart img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.close-cart:hover{
+    transform: scale(1.2);
+}
+
+.cart-body{
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--space-lg);
+}
+
+.cart-item{
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-3xl);
+    align-items: center;
+    padding: var(--space-2xl) 0;
+    border-bottom: 1px solid var(--primary-light);
+}
+
+.cart-image{
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
+
+}
+
+.cart-product-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+
+}
+
+.cart-content{
+    flex: 1;
+}
+
+.cart-content h3{
+    margin-bottom: var(--space-sm);
+}
+
+.price{
+    display: flex;
+    gap: var(--space-sm);
+    color: var(--text);
+    margin-bottom: var(--space-md);
+}
+
+.edit-item{
+    color: var(--primary-light);
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+
+.cart-footer{
+    padding: var(--space-md);
+    border-top: 1px solid var(--border);
+}
+
+.total-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-lg);
+}
+
+.total-price span{
+    font-weight: var(--fw-bold);
+}
+
+.view-cart{
+    display: block;
+    text-align: center;
+    color: var(--primary);
+    padding: var(--space-md);
+    border: 2px solid var(--primary);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
+    transition: var(--transition-normal);
+}
+
+.view-cart:hover{
+    background: var(--primary);
+    color: white;
+}
+
+.checkout-btn{
+    display: block;
+    text-align: center;
+    padding: var(--space-md);
+    background: var(--primary-light);
+    color: white;
+    border-radius: var(--radius-md);
+    transition: var(--transition-normal);
+}
+
+.checkout-btn:hover{
+    background: var(--primary);
+}
+
+.cart-empty{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-lg);
+}
+
+.cart-empty img{
+    width: 150px;
+    height: auto;
+}
+
+.cart-empty p{
+    color: var(--primary-dark);
+}
+
+.cart-empty a{
+    color: var(--primary-light);
+    font-weight: var(--fw-semibold);
+    transition: var(--transition-normal);
+}
+
+.cart-empty a:hover{
+    transform: scale(1.2);
+}
+
+
+/* برای قسمت جاوااسکریپت و نمایش سبد خالی یا آیتم ها، که کلاس اکتیو فعال و غیرفعال شود */
+/* .cart-items{
+    display: none;
+}
+
+.cart-empty{
+    display: none;
+}
+
+.cart-items.active{
+    display: block;
+}
+
+.cart-empty.active{
+    display: flex;
+} */
+
+
+/* ==========================
+        HAMBURGER MENU
+========================== */
+.mobile-menu{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -320px;
+    width: 320px;
+    height: 100vh;
+    background: var(--white);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-normal);
+    z-index: var(--z-mobile-menu);
+}
+
+.mobile-menu{
+    right: -320px;
+}
+
+.mobile-menu.active{
+    right: 0;
+}
+
+.mobile-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-lg);
+}
+
+.close-mobile{
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.close-mobile:hover{
+    transform: scale(1.2);
+}
+
+.close-mobile img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.mobile-header h2{
+    color: var(--primary);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.mobile-body{
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.mobile-links{
+    list-style: none;
+    padding: var(--space-lg) 0;
+}
+
+.mobile-links li{
+    margin-bottom: var(--space-sm);
+}
+
+.mobile-links a{
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
+    transition: var(--transition-normal);
+    color: var(--primary);
+}
+
+
+.mobile-links a:hover{
+    color: var(--primary-light);
+    font-weight: var(--fw-bold);
+}
+
+
+
+.mobile-links img{
+    width: 1.8rem;
+}
+
+
+
+.mobile-footer{
+    text-align: center;
+    padding: var(--space-md);
+    color: var(--primary-light);
+    font-size: .85rem;
+}
+
+
+
+/* ==========================
+        RESPONSIVE
+========================== */
+
+/* تعیین صفحه ی موبایل و پیدا شدن همبرگری */
+.nav-menu{
+    display: flex;
+}
+
+.menu-btn{
+    display: none;
+}
+
+@media(max-width: 768px){
+    .nav-menu{
+        display: none;
+    }
+
+    .menu-btn{
+        display: flex;
+    }
+}
+
+/* راهنما برای مدیا کوئری */
+/* 
+1400px   مانیتور بزرگ
+
+1200px   لپ‌تاپ
+
+992px    تبلت افقی
+
+768px    تبلت
+
+576px    موبایل */

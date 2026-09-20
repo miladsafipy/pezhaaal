@@ -1,0 +1,115 @@
+@import url('../design_system/base/variables/category_card_var.css');
+/* @import url('../design_system/base/reset.css'); */
+/* @import url('../design_system/base/typography.css'); */
+@import url('../design_system/utilities/title_divider.css');
+
+
+
+
+
+/* ===============================
+            SECTION
+================================== */
+.category-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.categories{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: var(--space-2xl) 0;
+    width: 100%;
+    height: auto;
+    gap: var(--space-3xl);
+}
+
+
+
+
+
+/* ===============================
+            CATEGORY
+================================== */
+.category{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+
+
+
+
+
+/* ===============================
+            IMAGE
+================================== */
+.category-image img{
+    position: relative;
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    border-radius: var(--radius-circle);
+    transition: var(--transition-normal);
+    z-index: var(--z-shining);
+}
+
+.category-image a{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    border-radius: var(--radius-circle);
+    
+}
+
+.category-image a::before{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -80%;
+    width: 40%;
+    height: 200%;
+    background: linear-gradient(
+        120deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.15) 35%,
+        rgba(255, 255, 255, 0.8) 50%,
+        rgba(255, 255, 255, 0.15) 65%,
+        transparent 100%
+    );
+    transform: rotate(20deg);
+    transition: left var(--transition-slow);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.category-image a:hover::before{
+    left: 150%;
+}
+
+.category-image a:hover img{
+    transform: scale(1.1);   
+}
+
+
+/* ===============================
+            DETAILS
+================================== */
+.category-name h2{
+    color: var(--primary);
+    transition: var(--transition-normal);
+}
+
+.category-name:hover h2{
+    transform: scale(1.1);
+}
+
+.numbers span{
+    color: var(--primary-light);
+}

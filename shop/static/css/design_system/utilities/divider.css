@@ -1,0 +1,12 @@
+@import url(../base/variables.css);
+
+.end-divider{
+   border: none;
+   height: 2px;
+   background:
+    linear-gradient(
+        to left,
+        transparent,
+        var(--primary),
+        transparent);
+}

@@ -1,0 +1,50 @@
+@import url('../base/variables.css');
+
+/* ===============================
+            TITLE DIVIDER
+================================== */
+.section-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+    margin: var(--space-xl) 0;
+}
+
+
+.title-divider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.line-1{
+    width: 18rem;       /* حدود یک پنجم مانیتور */
+    height: 5px;
+    border-radius: var(--radius-3xl);
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #0f8b4c,
+        #2ecc71,
+        #0f8b4c,
+        transparent
+    );
+}
+
+.line-2{
+    width: 11rem;
+    height: 4px;
+    border-radius: var(--radius-3xl);
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #38d87b,
+        transparent
+    );
+
+    opacity: .9;
+}

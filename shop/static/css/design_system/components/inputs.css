@@ -1,0 +1,16 @@
+@import url('../base/variables.css');
+
+
+.general-input input{
+    width: 100%;
+    height: 48px;
+    padding: var(--space-md);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-lg);
+    outline: none;
+    transition: var(--transition-normal);
+}
+
+.general-input input:focus{
+    border-color: var(--primary-light);
+}

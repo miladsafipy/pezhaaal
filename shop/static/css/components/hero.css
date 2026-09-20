@@ -1,0 +1,243 @@
+@import url('../design_system/base/variables/hero_var.css');
+@import url('../design_system/base/typography.css');
+@import url('../design_system/base/reset.css');
+@import url('../design_system/utilities/logo_shining.css');
+
+
+
+.hero-container {
+    width: 100%;
+    position: relative;
+}
+
+
+/* =========================================
+   HERO MAIN
+========================================= */
+
+.hero-main {
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    isolation: isolate;
+}
+
+
+/* =========================================
+   HERO IMAGE
+========================================= */
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    inset: 0;
+}
+
+
+/* =========================================
+   DARK / GLASS OVERLAY
+========================================= */
+
+.hero-main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(25, 30, 24, 0.72) 0%,
+            rgba(25, 30, 24, 0.50) 30%,
+            rgba(25, 30, 24, 0.20) 55%,
+            rgba(25, 30, 24, 0.02) 80%
+        );
+    pointer-events: none;
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 50%;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-lg);
+    color: var(--white);
+    gap: var(--space-xl);
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.hero-content h1 {
+    font-size: 8rem;
+    font-weight: var(--fw-extra-bold);
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.hero-btn {
+    display: flex;
+    gap: var(--space-md);
+    align-items: center;
+}
+
+.hero-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 145px;
+    padding: 13px 24px;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* اولین دکمه */
+
+.hero-link:first-child {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border-color: transparent;
+}
+
+
+/* Hover */
+
+.hero-link:hover {
+    transform: translateY(-3px);
+    background: var(--primary-light);
+    color: var(--white);
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Hover دکمه اول */
+
+.hero-link:first-child:hover {
+    background: var(--primary-dark);
+    color: var(--white);
+}
+
+
+/* =========================================
+   HERO DETAILS
+========================================= */
+.hero-details{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    width: 100%;
+    min-height: 100px;
+    border-radius: inherit;
+    background: var(--primary-dark);
+    padding: var(--space-md) var(--space-xl);
+    border-radius: var(--radius-lg);
+
+}
+
+.hero-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-sm) var(--space-md);
+    min-width: 200px;
+    border-radius: var(--radius-xl);
+    background: var(--white);
+}
+
+.hero-detail img{
+    width: 50px;
+    height: 50px;
+}
+
+/* ============================
+            RESPONSIVE  
+=============================== */
+@media (max-width: 768px) {
+
+    .hero-container {
+        padding: var(--space-md);
+    }
+
+    .hero-main {
+        min-height: 700px;
+    }
+
+    .hero-content {
+        width: 100%;
+        min-height: 700px;
+
+        justify-content: flex-end;
+
+        padding: var(--space-xl);
+
+        background:
+            linear-gradient(
+                0deg,
+                rgba(20, 25, 18, 0.85) 0%,
+                rgba(20, 25, 18, 0.55) 45%,
+                rgba(20, 25, 18, 0.05) 80%
+            );
+    }
+
+    .hero-main::before {
+        background:
+            linear-gradient(
+                0deg,
+                rgba(20, 25, 18, 0.5) 0%,
+                rgba(20, 25, 18, 0.1) 70%
+            );
+    }
+
+    .hero-btn {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-link {
+        flex: 1;
+        min-width: 130px;
+    }
+}

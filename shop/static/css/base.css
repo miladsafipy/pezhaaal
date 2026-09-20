@@ -1,0 +1,14 @@
+@import url('design_system/base/variables.css');
+@import url('design_system/base/typography.css');
+@import url('design_system/base/reset.css');
+
+@import url('pages/products_page.css');
+@import url('pages/details_page.css');
+
+@import url('components/navbar.css');
+@import url('components/hero.css');
+@import url('components/category_card.css');
+@import url('components/special_cards.css');
+@import url('components/product_card.css');
+@import url('components/new_arrivals.css');
+@import url('components/footer.css');

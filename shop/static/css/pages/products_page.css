@@ -1,0 +1,116 @@
+/* کارت محصول */
+@import url('../components/product_card.css');
+
+/* متغیرها */
+/* @import url('../design_system/base/variables.css'); */
+
+/* تایپوگرافی */
+/* @import url('../design_system/base/typography.css'); */
+
+/* Reset */
+/* @import url('../design_system/base/reset.css'); */
+
+/* Glass Morphism */
+@import url('../design_system/utilities/glass_morphism.css');
+
+/* Pagination */
+@import url('../design_system/components/pagination.css');
+
+
+
+
+/* ==================================
+                PAGE HERO
+=====================================*/
+
+.product-page-image img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+.product-page-image{
+    position: relative;
+}
+
+
+.product-page-hero-label{
+    position: absolute;
+    left: 20%;
+    bottom: 150px;
+}
+
+.product-page-hero-label label{
+    color: var(--white);
+    font-size: 80px;
+    font-weight: var(--fw-bold);
+    padding: var(--space-sm) var(--space-3xl);
+    border-radius: var(--radius-3xl);
+}
+
+
+/* ==================================
+                DIRECTORY  
+=====================================*/
+.directory{
+    margin-right: var(--space-3xl);
+}
+
+.directory-navigation{
+    display: flex;
+    gap: var(--space-xl);
+}
+
+.directory-navigation li a{
+    color: var(--primary);
+}
+
+.directory-navigation li a:hover{
+    color: var(--primary--light);
+}
+
+.directory-navigation span{
+    cursor: context-menu;
+}
+
+
+/* ==================================
+                FILTERS  
+=====================================*/
+
+
+
+
+/* ==================================
+                GRIDE PAGE
+=====================================*/
+
+/* طراحی کل بخش محصولات و فیلتر */
+.products-page{
+    display: grid;
+    grid-template-columns:4fr 1fr;
+    width: 100%;
+    /* margin: var(--space-2xl) auto; */
+    padding: 0 var(var(--space-xl));
+}
+
+
+
+/* گرید بخش کارت ها */
+.products-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: var(--space-lg);
+    align-content: start;
+    align-items: start;
+    border-left: 1px solid var(--primary);
+}
+
+
+/* ==================================
+            ADVERTISEMENTS
+=====================================*/
+.advertisements{
+    padding: var(--space-md);
+}
